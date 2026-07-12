@@ -4,10 +4,20 @@ A lovingly crafted parody of late 1990s/early 2000s warez websites.
 ## FEATURES
 
 -Giant ASCII art banner
+
+
 -Cyan-on-black hacker aesthetic 
+
+
 - Scrolling marquee announcements
+
+  
 - Visitor counter
+
+  
 - questionable if hilarious file listings
+
+  
 - Netscape Compatible(probably)
 
 ## Screenshots
@@ -17,8 +27,11 @@ Coming soon.
 ## Latest Uploads 
 
 -WinRAR_99_FINAL.zip
+
 -Frooty_Loops_3.0_Cracked
+
 -DefinitelyNotAVirus.exe
+
 -etc....
 
 ## Installation 
@@ -42,8 +55,8 @@ It is a parody site created for HTML/CSS practice and nostalgia
 
 ## TODO
 
-- [ ] Fake IRC chat
-- [ ] Visitor counter with javascript
+- [ ] Fake IRC chat 
+- [ ] Visitor counter with javascript   
 - [ ] Under Construction GIF
 - [ ] Fake admin portal
 - [ ] Guestbook
