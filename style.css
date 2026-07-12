@@ -1,0 +1,15 @@
+body { 
+	background-color: black;
+	color: cyan;
+	font-family: "Courier New", monospace;
+}
+h1 {
+	text-shadow: 0 0 10px lime;
+}
+a {
+	color:cyan;
+}
+.logo {
+ 	 text-align: center;
+ 	 color: lime; 
+  }
