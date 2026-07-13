@@ -55,7 +55,7 @@ fetch("courses.txt")
     .then(data => {
 
         const files = data
-            .split(/\r?\n/)
+            .split("\n")
             .map(line => line.trim())
             .filter(line => line.length > 0);
 
