@@ -1,39 +1,37 @@
 <!DOCTYPE html>
-<html> 
+<html>
 <head>
-	<title>WAREZ WORKS 2001</title>
-
-	<link rel="stylesheet" href="style.css"> 
+    <title>WAREZ WORKS 2001</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body bgcolor="black" text="cyan">
+<body>
 
 <center>
 
-<h1>WAREZ WORKS 2001</h1> 
+<h1>WAREZ WORKS 2001</h1>
 
-	<pre class="logo">
- _________ ______   _______  _______  ______   _______ _________ _______  _  __>
-\__   __// ___  \ (  ____ )(  ____ )/ ___  \ (  ____ \\__   __/(  ____ )( )(  _>
-   ) (   \/   \  \| (    )|| (    )|\/   \  \| (    \/   ) (   | (    )|| || ( >
-   | |      ___) /| (____)|| (____)|   ___) /| (_____    | |   | (____)|| || (_>
-   | |     (___ ( |     __)|     __)  (___ ( (_____  )   | |   |     __)| ||  _>
-   | |         ) \| (\ (   | (\ (         ) \	   ) |   | |   | (\ (   (_)| ( >
-   | |   /\___/  /| ) \ \__| ) \ \__/\___/  //\____) |   | |   | ) \ \__ _ | ) >
-   )_(   \______/ |/   \__/|/   \__/\______/ \_______)   )_(   |/   \__/(_)|/  >
-                                                                               >
-
+<pre class="logo">
+ _________ ______   _______  _______  ______   _______ _________ _______
+\__   __// ___  \ (  ____ )(  ____ )/ ___  \ (  ____ \\__   __/
+   ) (   \/   \  \| (    )|| (    )|\/   \  \| (    \/   ) (
+   | |      ___) /| (____)|| (____)|   ___) /| (_____    | |
+   | |     (___ ( |     __)|     __)  (___ ( (_____  )   | |
+   | |         ) \| (\ (   | (\ (         ) \      ) |   | |
+   | |   /\___/  /| ) \ \__| ) \ \__/\___/  //\____) |   | |
+   )_(   \______/ |/   \__/|/   \__/\______/ \_______)   )_(
 </pre>
-      	
-
 
 <marquee>
-*** BEST VIEWED IN NETSCAPE NAVIGATOR 4.04 ***   *** NEW RELEASES DAILY ***    *** NO FEDS ***   *** HUGS ARE BETTER THAN HANDSHAKES ***
-</marquee> 
+*** BEST VIEWED IN NETSCAPE NAVIGATOR 4.04 ***
+*** NEW RELEASES DAILY ***
+*** NO FEDS ***
+*** HUGS ARE BETTER THAN HANDSHAKES ***
+</marquee>
 
 <hr width="80%">
 
-<p> 
+<p>
 visitor number:
 <b>00001337</b>
 </p>
@@ -51,32 +49,45 @@ visitor number:
 
 <datalist id="warezList"></datalist>
 
-<div id="results"></div>
-
 <script>
 fetch("courses.txt")
     .then(response => response.text())
     .then(data => {
 
         const files = data
-            .split("\n")
-            .map(file => file.trim())
-            .filter(file => file.length > 0);
+            .split(/\r?\n/)
+            .map(line => line.trim())
+            .filter(line => line.length > 0);
 
         const datalist = document.getElementById("warezList");
 
         files.forEach(file => {
-
             const option = document.createElement("option");
-
             option.value = file;
-
             datalist.appendChild(option);
-
         });
 
+        console.log("Loaded " + files.length + " files.");
+    })
+    .catch(error => {
+        console.error("Failed to load courses.txt:", error);
     });
 </script>
+
+<hr width="80%">
+
+<h2>Latest Uploads</h2>
+
+<pre>
+<a href="https://terrestrialtechnologies.github.io">WinRAR_99_FINAL.zip</a>
+<a href="https://terrestrialtechnologies.github.io">Frooty_Loops_3.0_Cr@cK3d</a>
+<a href="https://terrestrialtechnologies.github.io">DefinitelyNotAVirus.exe</a>
+<a href="https://terrestrialtechnologies.github.io">README_REAL_ACTUAL_FINAL_USETHIS1_V3.TXT</a>
+</pre>
+
+<hr width="80%">
+
+<h2>System Status</h2>
 
 <pre>
 IRC Server: ONLINE
