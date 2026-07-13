@@ -40,49 +40,43 @@ visitor number:
 
 <hr width="80%">
 
-<h2>Latest Uploads</h2>
+<h2>Search Archive</h2>
 
-	<input type="text" id="searchBox" placeholder="Search Warez Archive..."> 
+<input
+    type="text"
+    id="searchBox"
+    list="warezList"
+    placeholder="Search Warez Archive..."
+>
 
-	<div id="results"</div> 
+<datalist id="warezList"></datalist>
 
-	<script> 
-	let files = [];
-	
-	fetch("classes.txt")
-		.then(response => response.text())
-		.then(data => {
-			const classes = data
-				.split("\n")
-				.map(class => file.trim())
-				.filter(file => file.length > 0);
-			const datalist = document.getElementById("warezList");
+<div id="results"></div>
 
-			files.forEach(file => { 
+<script>
+fetch("courses.txt")
+    .then(response => response.text())
+    .then(data => {
 
-				const option = document.createElement("option"); 
+        const files = data
+            .split("\n")
+            .map(file => file.trim())
+            .filter(file => file.length > 0);
 
-				option.value = file; 
+        const datalist = document.getElementById("warezList");
 
-				datalist.appendChild(option);
-	
-	
-							   });
-		
-	});
-	
-	</script>
+        files.forEach(file => {
 
-<pre>
-<a href="https://terrestrialtechnologies.github.io">WinRAR_99_FINAL.zip</a>
-<a href="https://terrestrialtechnologies.github.io">Frooty_Loops_3.0_Cr@cK3d</a>
-<a href="https://terrestrialtechnologies.github.io">DefinitelyNotAVirus.exe</a>
-<a href="https://terrestrialtechnologies.github.io">README_REAL_ACTUAL_FINAL_USETHIS1_V3.TXT</a>
-</pre>
+            const option = document.createElement("option");
 
-<hr width="80%">
+            option.value = file;
 
-<h2>System Status</h2>
+            datalist.appendChild(option);
+
+        });
+
+    });
+</script>
 
 <pre>
 IRC Server: ONLINE
