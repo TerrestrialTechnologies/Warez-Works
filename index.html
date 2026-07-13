@@ -52,36 +52,21 @@ visitor number:
 	fetch("classes.txt")
 		.then(response => response.text())
 		.then(data => {
-			files = data.split("\n");
-		});
+			const classes = data
+				.split("\n")
+				.map(class => file.trim())
+				.filter(file => file.length > 0);
+			const datalist = document.getElementById("warezList");
+
+			files.forEach(file => { 
+
+				const option = document.createElement("option"); 
+
+				option.value = file; 
+
+				datalist.appendChild(option);
 	
-	const SearchBox = document.getElementByID("SearchBox"); 
-	const results = document.getElementById("results");
 	
-	searchBox.addEventListener("input", function() {
-		
-							   const query = this.value.toLowerCase();
-		
-							   results.innerHTML = ""; 
-							   
-							   if (query.length === 0) {
-								   return; 
-							   }
-		
-							   const matches = classes.filter(file => file.toLowerCase().includes(query)
-								);
-		
-							   matches.slice(0, 20).forEach(file => {
-								   
-									const link = document.createElement("a"); 
-															
-															link.href = "https://terrestrialtechnologies.github.io";
-								   
-															link.textContent = file; 
-															
-															link.style.display = "block"; 
-															
-															results.appendChild(link);
 							   });
 		
 	});
