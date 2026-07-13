@@ -13,3 +13,25 @@ a {
  	 text-align: center;
  	 color: lime; 
   }
+input { 
+	backgroung-color: black; 
+	color: lime; 
+	border: 1px solid cyan;
+	font-family: "Courier New", monospace;
+	padding: 4px; 
+	width: 400px;
+}
+
+#results {
+	margin-top: 10px; 
+}
+#results a {
+	display: block; 
+	color: lime;
+	text-decoration: none; 
+}
+
+#results a:hover {
+	background-color: cyan; 
+	color: black; 
+}
